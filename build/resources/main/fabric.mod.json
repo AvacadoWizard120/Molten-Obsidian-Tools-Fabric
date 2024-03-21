@@ -1,29 +1,38 @@
 {
 	"schemaVersion": 1,
-	"id": "molten-obsidian-tools",
-	"version": "1.0.0",
+	"id": "moltenobsidiantools",
+	"version": "1.0.0-1.19.3",
 	"name": "Molten Obsidian Tools",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Have you ever been tired of crafting new diamond tools when one breaks? Well, now you can give your diamond tools an upgrade with molten obsidian!
+
+Now you can blast obsidian in a blast furnace to get Molten Obsidian, use the Molten Obsidian in a Smithing Table with your diamond tool and you get a Molten Obsidian tool!
+
+You can now also reinforce your netherite tools!
+Check JEI for recipes.",
 	"authors": [
-		"Me!"
+		"ConfusingFool93",
+		"selar_uwu"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://www.youtube.com/channel/UCei_eezV5x9f6tecwIOVO1g",
+		"sources": "https://github.com/AvacadoWizard120/Molten-Obsidian-Tools-Fabric/tree/1.19.3"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/molten-obsidian-tools/icon.png",
+	"license": "GPL-3.0",
+	"icon": "assets/moltenobsidiantools/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"confusingfool93.moltenobsidiantools.MoltenObsidianTools"
+		],
+		"client": [
+			"confusingfool93.moltenobsidiantools.MoltenObsidianToolsClient"
 		],
 		"fabric-datagen": [
 			"confusingfool93.moltenobsidiantools.MoltenObsidianToolsDataGenerator"
 		]
 	},
 	"mixins": [
-		"molten-obsidian-tools.mixins.json"
+		"moltenobsidiantools.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.7",
