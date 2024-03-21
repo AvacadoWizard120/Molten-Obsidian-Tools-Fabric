@@ -1,3 +1,6 @@
 {
-  "item.moltenobsidiantools.molten_obsidian": "Molten Obsidian"
+  "item.moltenobsidiantools.molten_obsidian": "Molten Obsidian",
+  "item.moltenobsidiantools.reinforced_molten_obsidian": "Reinforced Molten Obsidian",
+
+  "itemgroup.moltenObsidianTools": "Molten Obsidian Tools"
 }

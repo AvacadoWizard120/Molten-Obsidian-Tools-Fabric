@@ -14,7 +14,10 @@ import net.minecraft.util.Identifier;
 public class ModItems
 {
     public static final Item MOLTEN_OBSIDIAN = registerItem("molten_obsidian",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().maxCount(4)));
+
+    public static final Item REINFORCED_MOLTEN_OBSIDIAN = registerItem("reinforced_molten_obsidian",
+            new Item(new FabricItemSettings().maxCount(1)));
 
     private static Item registerItem(String name, Item item)
     {
@@ -24,8 +27,10 @@ public class ModItems
     public static void addItemsToItemGroup()
     {
         addToItemGroup(ItemGroups.INGREDIENTS, MOLTEN_OBSIDIAN);
+        addToItemGroup(ItemGroups.INGREDIENTS, REINFORCED_MOLTEN_OBSIDIAN);
 
         addToItemGroup(ModItemGroup.MOLDTEN_OBSIDIAN_TOOLS, MOLTEN_OBSIDIAN);
+        addToItemGroup(ModItemGroup.MOLDTEN_OBSIDIAN_TOOLS, REINFORCED_MOLTEN_OBSIDIAN);
     }
 
     private static void addToItemGroup(ItemGroup group, Item item)
