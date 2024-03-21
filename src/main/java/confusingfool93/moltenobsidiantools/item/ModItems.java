@@ -24,6 +24,8 @@ public class ModItems
     public static void addItemsToItemGroup()
     {
         addToItemGroup(ItemGroups.INGREDIENTS, MOLTEN_OBSIDIAN);
+
+        addToItemGroup(ModItemGroup.MOLDTEN_OBSIDIAN_TOOLS, MOLTEN_OBSIDIAN);
     }
 
     private static void addToItemGroup(ItemGroup group, Item item)

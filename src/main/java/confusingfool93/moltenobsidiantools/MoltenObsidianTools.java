@@ -1,5 +1,6 @@
 package confusingfool93.moltenobsidiantools;
 
+import confusingfool93.moltenobsidiantools.item.ModItemGroup;
 import confusingfool93.moltenobsidiantools.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -14,6 +15,7 @@ public class MoltenObsidianTools implements ModInitializer {
 	@Override
 	public void onInitialize()
 	{
+		ModItemGroup.registerItemGroups();
 		ModItems.registerModItems();
 	}
 }
