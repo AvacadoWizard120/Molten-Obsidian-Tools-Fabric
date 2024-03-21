@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "molten-obsidian-tools",
+	"id": "moltenobsidiantools",
 	"version": "${version}",
 	"name": "Molten Obsidian Tools",
 	"description": "This is an example description! Tell everyone what your mod is about!",
@@ -11,19 +11,22 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/molten-obsidian-tools/icon.png",
+	"license": "GPL-3.0",
+	"icon": "assets/moltenobsidiantools/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"confusingfool93.moltenobsidiantools.MoltenObsidianTools"
+		],
+		"client": [
+			"confusingfool93.moltenobsidiantools.MoltenObsidianToolsClient"
 		],
 		"fabric-datagen": [
 			"confusingfool93.moltenobsidiantools.MoltenObsidianToolsDataGenerator"
 		]
 	},
 	"mixins": [
-		"molten-obsidian-tools.mixins.json"
+		"moltenobsidiantools.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.7",
