@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "moltenobsidiantools",
-	"version": "1.0.0-1.20",
+	"version": "1.0.0-1.20.2",
 	"name": "Molten Obsidian Tools",
 	"description": "Have you ever been tired of crafting new diamond tools when one breaks? Well, now you can give your diamond tools an upgrade with molten obsidian!
 
@@ -36,7 +36,7 @@ Check JEI for recipes.",
 	],
 	"depends": {
 		"fabricloader": ">=0.15.7",
-		"minecraft": ">=1.19.3",
+		"minecraft": ">=1.20.2",
 		"java": ">=17",
 		"fabric-api": "*"
 	},
