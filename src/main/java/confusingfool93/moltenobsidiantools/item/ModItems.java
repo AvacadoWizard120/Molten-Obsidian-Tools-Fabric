@@ -2,6 +2,7 @@ package confusingfool93.moltenobsidiantools.item;
 
 import confusingfool93.moltenobsidiantools.MoltenObsidianTools;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -41,6 +42,23 @@ public class ModItems
     public static final Item REINFORCED_OBSIDIAN_AXE = registerItem("reinforced_obsidian_axe",
             new AxeItem(ModToolMaterial.REINFORCED, 10, -1f, new FabricItemSettings()));
 
+    private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries)
+    {
+        entries.add(MOLTEN_OBSIDIAN);
+        entries.add(REINFORCED_MOLTEN_OBSIDIAN);
+    }
+    private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries)
+    {
+        entries.add(MOLTEN_OBSIDIAN_PICKAXE);
+        entries.add(MOLTEN_OBSIDIAN_AXE);
+        entries.add(MOLTEN_OBSIDIAN_SHOVEL);
+        entries.add(MOLTEN_OBSIDIAN_HOE);
+        entries.add(REINFORCED_OBSIDIAN_PICKAXE);
+        entries.add(REINFORCED_OBSIDIAN_AXE);
+        entries.add(REINFORCED_OBSIDIAN_SHOVEL);
+        entries.add(REINFORCED_OBSIDIAN_HOE);
+    }
+
     private static Item registerItem(String name, Item item)
     {
         return Registry.register(Registries.ITEM, new Identifier(MoltenObsidianTools.MOD_ID, name), item);
@@ -49,5 +67,10 @@ public class ModItems
     public static void registerModItems()
     {
         MoltenObsidianTools.LOGGER.info("Registering the Items for " + MoltenObsidianTools.MOD_ID);
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientsItemGroup);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToToolsItemGroup);
     }
+
+
 }
