@@ -46,40 +46,8 @@ public class ModItems
         return Registry.register(Registries.ITEM, new Identifier(MoltenObsidianTools.MOD_ID, name), item);
     }
 
-    public static void addItemsToItemGroup()
-    {
-        addToItemGroup(ItemGroups.INGREDIENTS, MOLTEN_OBSIDIAN);
-        addToItemGroup(ItemGroups.INGREDIENTS, REINFORCED_MOLTEN_OBSIDIAN);
-        addToItemGroup(ItemGroups.TOOLS, MOLTEN_OBSIDIAN_AXE);
-        addToItemGroup(ItemGroups.TOOLS, MOLTEN_OBSIDIAN_HOE);
-        addToItemGroup(ItemGroups.TOOLS, MOLTEN_OBSIDIAN_SHOVEL);
-        addToItemGroup(ItemGroups.TOOLS, MOLTEN_OBSIDIAN_PICKAXE);
-        addToItemGroup(ItemGroups.TOOLS, REINFORCED_OBSIDIAN_AXE);
-        addToItemGroup(ItemGroups.TOOLS, REINFORCED_OBSIDIAN_HOE);
-        addToItemGroup(ItemGroups.TOOLS, REINFORCED_OBSIDIAN_PICKAXE);
-        addToItemGroup(ItemGroups.TOOLS, REINFORCED_OBSIDIAN_SHOVEL);
-
-        addToItemGroup(ModItemGroup.MOLDTEN_OBSIDIAN_TOOLS, MOLTEN_OBSIDIAN);
-        addToItemGroup(ModItemGroup.MOLDTEN_OBSIDIAN_TOOLS, REINFORCED_MOLTEN_OBSIDIAN);
-        addToItemGroup(ModItemGroup.MOLDTEN_OBSIDIAN_TOOLS, MOLTEN_OBSIDIAN_AXE);
-        addToItemGroup(ModItemGroup.MOLDTEN_OBSIDIAN_TOOLS, MOLTEN_OBSIDIAN_PICKAXE);
-        addToItemGroup(ModItemGroup.MOLDTEN_OBSIDIAN_TOOLS, MOLTEN_OBSIDIAN_HOE);
-        addToItemGroup(ModItemGroup.MOLDTEN_OBSIDIAN_TOOLS, MOLTEN_OBSIDIAN_SHOVEL);
-        addToItemGroup(ModItemGroup.MOLDTEN_OBSIDIAN_TOOLS, REINFORCED_OBSIDIAN_SHOVEL);
-        addToItemGroup(ModItemGroup.MOLDTEN_OBSIDIAN_TOOLS, REINFORCED_OBSIDIAN_PICKAXE);
-        addToItemGroup(ModItemGroup.MOLDTEN_OBSIDIAN_TOOLS, REINFORCED_OBSIDIAN_HOE);
-        addToItemGroup(ModItemGroup.MOLDTEN_OBSIDIAN_TOOLS, REINFORCED_OBSIDIAN_AXE);
-    }
-
-    private static void addToItemGroup(ItemGroup group, Item item)
-    {
-        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
-    }
-
     public static void registerModItems()
     {
         MoltenObsidianTools.LOGGER.info("Registering the Items for " + MoltenObsidianTools.MOD_ID);
-
-        addItemsToItemGroup();
     }
 }
