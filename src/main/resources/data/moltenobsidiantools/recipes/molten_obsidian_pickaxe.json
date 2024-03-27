@@ -1,5 +1,6 @@
 {
-  "type": "minecraft:smithing",
+  "type": "minecraft:smithing_trim",
+  "template": {},
   "base": {
     "item": "minecraft:diamond_pickaxe"
   },
