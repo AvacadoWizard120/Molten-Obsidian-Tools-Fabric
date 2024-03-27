@@ -1,6 +1,8 @@
 {
   "type": "minecraft:smithing_trim",
-  "template": {},
+  "template": {
+    "item": "moltenobsidiantools:molten_upgrade_template"
+  },
   "base": {
     "item": "minecraft:diamond_axe"
   },

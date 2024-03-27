@@ -16,6 +16,7 @@ public class ModItemGroup
                     .displayName(Text.translatable("itemgroup.moltenObsidianTools"))
                     .icon(() -> new ItemStack(ModItems.MOLTEN_OBSIDIAN)).entries((displayContext, entries) -> {
                         entries.add(ModItems.MOLTEN_OBSIDIAN);
+                        entries.add(ModItems.MOLTEN_UPGRADE_TEMPLATE);
                         entries.add(ModItems.MOLTEN_OBSIDIAN_AXE);
                         entries.add(ModItems.MOLTEN_OBSIDIAN_HOE);
                         entries.add(ModItems.MOLTEN_OBSIDIAN_SHOVEL);

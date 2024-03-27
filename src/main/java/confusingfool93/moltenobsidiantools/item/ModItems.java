@@ -7,11 +7,18 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.text.LiteralTextContent;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 
 public class ModItems
 {
+    public static final Text MOLTEN_UPGRADE_APPLIES_TO_TEXT = Text.of("Diamond Tools");
+    public static final Text MOLTEN_UPGRADE_INGREDIENTS_TEXT = Text.of("Molten Obsidian");
+    public static final Text MOLTEN_UPGRADE_TEXT = Text.of("MOLTEN_UPGRADE_TEXT");
+    public static final Text MOLTEN_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Text.of("MOLTEN_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT");
+    public static final Text MOLTEN_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT = Text.of("NETHERITE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT");
     public static final Item MOLTEN_OBSIDIAN = registerItem("molten_obsidian",
             new Item(new FabricItemSettings().maxCount(4)));
 
@@ -41,6 +48,9 @@ public class ModItems
 
     public static final Item REINFORCED_OBSIDIAN_AXE = registerItem("reinforced_obsidian_axe",
             new AxeItem(ModToolMaterial.REINFORCED, 10, -1f, new FabricItemSettings()));
+
+    public static final Item MOLTEN_UPGRADE_TEMPLATE = registerItem("molten_upgrade_template",
+            new SmithingTemplateItem(MOLTEN_UPGRADE_APPLIES_TO_TEXT, MOLTEN_UPGRADE_INGREDIENTS_TEXT, MOLTEN_UPGRADE_TEXT,MOLTEN_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT,MOLTEN_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, SmithingTemplateItem.createNetheriteUpgrade().getEmptyBaseSlotTextures(), SmithingTemplateItem.createNetheriteUpgrade().getEmptyAdditionsSlotTextures()));
 
     private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries)
     {
