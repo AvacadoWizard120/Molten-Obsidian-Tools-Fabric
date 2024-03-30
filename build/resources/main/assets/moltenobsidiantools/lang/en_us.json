@@ -18,7 +18,13 @@
   "item.moltenobsidiantools.smithing_template.molten_upgrade.base_slot_description": "Add diamond tool",
   "item.moltenobsidiantools.smithing_template.molten_upgrade.additions_slot_description": "Add Molten Obsidian",
 
+  "item.moltenobsidiantools.smithing_template.reinforced_upgrade.applies_to": "Netherite Tools",
+  "item.moltenobsidiantools.smithing_template.reinforced_upgrade.ingredients": "Reinforced Molten Obsidian",
+  "item.moltenobsidiantools.smithing_template.reinforced_upgrade.base_slot_description": "Add netherite tool",
+  "item.moltenobsidiantools.smithing_template.reinforced_upgrade.additions_slot_description": "Add Reinforced Molten Obsidian",
+
   "upgrade.moltenobsidiantools.molten_upgrade": "Molten Upgrade",
+  "upgrade.moltenobsidiantools.reinforced_upgrade": "Reinforced Upgrade",
 
 
   "itemgroup.moltenObsidianTools": "Molten Obsidian Tools"
