@@ -13,5 +13,13 @@
   "item.moltenobsidiantools.molten_upgrade_template": "Molten Upgrade Template",
 
 
+  "item.moltenobsidiantools.smithing_template.molten_upgrade.applies_to": "Diamond Tools",
+  "item.moltenobsidiantools.smithing_template.molten_upgrade.ingredients": "Molten Obsidian",
+  "item.moltenobsidiantools.smithing_template.molten_upgrade.base_slot_description": "Add diamond tool",
+  "item.moltenobsidiantools.smithing_template.molten_upgrade.additions_slot_description": "Add Molten Obsidian",
+
+  "upgrade.moltenobsidiantools.molten_upgrade": "Molten Upgrade",
+
+
   "itemgroup.moltenObsidianTools": "Molten Obsidian Tools"
 }

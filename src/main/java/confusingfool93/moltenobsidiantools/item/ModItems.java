@@ -7,18 +7,28 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.text.LiteralTextContent;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Util;
+
+import java.util.List;
 
 
 public class ModItems
 {
-    public static final Text MOLTEN_UPGRADE_APPLIES_TO_TEXT = Text.of("Diamond Tools");
-    public static final Text MOLTEN_UPGRADE_INGREDIENTS_TEXT = Text.of("Molten Obsidian");
-    public static final Text MOLTEN_UPGRADE_TEXT = Text.of("MOLTEN_UPGRADE_TEXT");
-    public static final Text MOLTEN_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Text.of("MOLTEN_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT");
-    public static final Text MOLTEN_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT = Text.of("NETHERITE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT");
+    private static final Formatting TITLE_FORMATTING = Formatting.GRAY;
+    private static final Formatting DESCRIPTION_FORMATTING = Formatting.BLUE;
+    private static final Text MOLTEN_UPGRADE_APPLIES_TO_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier(MoltenObsidianTools.MOD_ID, "smithing_template.molten_upgrade.applies_to"))).formatted(DESCRIPTION_FORMATTING);
+    private static final Text MOLTEN_UPGRADE_INGREDIENTS_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier(MoltenObsidianTools.MOD_ID, "smithing_template.molten_upgrade.ingredients"))).formatted(DESCRIPTION_FORMATTING);
+    private static final Text MOLTEN_UPGRADE_TEXT= Text.translatable(Util.createTranslationKey("upgrade", new Identifier(MoltenObsidianTools.MOD_ID, "molten_upgrade"))).formatted(TITLE_FORMATTING);
+    private static final Text MOLTEN_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier(MoltenObsidianTools.MOD_ID, "smithing_template.molten_upgrade.base_slot_description")));
+    private static final Text MOLTEN_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier(MoltenObsidianTools.MOD_ID, "smithing_template.molten_upgrade.additions_slot_description")));
+    private static final Identifier EMPTY_SLOT_PICKAXE_TEXTURE = new Identifier("item/empty_slot_pickaxe");
+    private static final Identifier EMPTY_SLOT_AXE_TEXTURE = new Identifier("item/empty_slot_axe");
+    private static final Identifier EMPTY_SLOT_HOE_TEXTURE = new Identifier("item/empty_slot_hoe");
+    private static final Identifier EMPTY_SLOT_SHOVEL_TEXTURE = new Identifier("item/empty_slot_shovel");
+    private static final Identifier EMPTY_SLOT_MOLTEN_TEXTURE = new Identifier(MoltenObsidianTools.MOD_ID, "item/empty_slot_molten");
     public static final Item MOLTEN_OBSIDIAN = registerItem("molten_obsidian",
             new Item(new FabricItemSettings().maxCount(4)));
 
@@ -50,7 +60,15 @@ public class ModItems
             new AxeItem(ModToolMaterial.REINFORCED, 10, -1f, new FabricItemSettings()));
 
     public static final Item MOLTEN_UPGRADE_TEMPLATE = registerItem("molten_upgrade_template",
-            new SmithingTemplateItem(MOLTEN_UPGRADE_APPLIES_TO_TEXT, MOLTEN_UPGRADE_INGREDIENTS_TEXT, MOLTEN_UPGRADE_TEXT,MOLTEN_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT,MOLTEN_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, SmithingTemplateItem.createNetheriteUpgrade().getEmptyBaseSlotTextures(), SmithingTemplateItem.createNetheriteUpgrade().getEmptyAdditionsSlotTextures()));
+            new SmithingTemplateItem(MOLTEN_UPGRADE_APPLIES_TO_TEXT, MOLTEN_UPGRADE_INGREDIENTS_TEXT, MOLTEN_UPGRADE_TEXT, MOLTEN_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, MOLTEN_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getMoltenUpgradeEmptyBaseSlotTextures(), getMoltenUpgradeEmptyAdditionsSlotTextures()));
+
+    private static List<Identifier> getMoltenUpgradeEmptyBaseSlotTextures() {
+        return List.of(EMPTY_SLOT_PICKAXE_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_SLOT_HOE_TEXTURE, EMPTY_SLOT_SHOVEL_TEXTURE);
+    }
+
+    private static List<Identifier> getMoltenUpgradeEmptyAdditionsSlotTextures() {
+        return List.of(EMPTY_SLOT_MOLTEN_TEXTURE);
+    }
 
     private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries)
     {
