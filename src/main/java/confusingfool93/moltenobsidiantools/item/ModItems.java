@@ -74,6 +74,8 @@ public class ModItems
 
     public static final Item REINFORCED_UPGRADE_TEMPLATE = registerItem("reinforced_upgrade_template",
             new SmithingTemplateItem(REINFORCED_UPGRADE_APPLIES_TO_TEXT, REINFORCED_UPGRADE_INGREDIENTS_TEXT, REINFORCED_UPGRADE_TEXT, REINFORCED_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, REINFORCED_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getMoltenUpgradeEmptyBaseSlotTextures(), getReinforcedUpgradeEmptyAdditionsSlotTextures()));
+
+
     private static List<Identifier> getMoltenUpgradeEmptyBaseSlotTextures() {
         return List.of(EMPTY_SLOT_PICKAXE_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_SLOT_HOE_TEXTURE, EMPTY_SLOT_SHOVEL_TEXTURE);
     }
