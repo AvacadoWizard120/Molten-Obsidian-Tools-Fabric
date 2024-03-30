@@ -22,6 +22,7 @@ public class ModItemGroup
                         entries.add(ModItems.MOLTEN_OBSIDIAN_SHOVEL);
                         entries.add(ModItems.MOLTEN_OBSIDIAN_PICKAXE);
                         entries.add(ModItems.REINFORCED_MOLTEN_OBSIDIAN);
+                        entries.add(ModItems.REINFORCED_UPGRADE_TEMPLATE);
                         entries.add(ModItems.REINFORCED_OBSIDIAN_AXE);
                         entries.add(ModItems.REINFORCED_OBSIDIAN_HOE);
                         entries.add(ModItems.REINFORCED_OBSIDIAN_SHOVEL);

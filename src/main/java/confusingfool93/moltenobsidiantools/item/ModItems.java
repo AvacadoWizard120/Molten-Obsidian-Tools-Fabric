@@ -91,7 +91,9 @@ public class ModItems
     private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries)
     {
         entries.add(MOLTEN_OBSIDIAN);
+        entries.add(MOLTEN_UPGRADE_TEMPLATE);
         entries.add(REINFORCED_MOLTEN_OBSIDIAN);
+        entries.add(REINFORCED_UPGRADE_TEMPLATE);
     }
     private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries)
     {
