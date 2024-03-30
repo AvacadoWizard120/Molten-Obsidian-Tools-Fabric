@@ -1,6 +1,6 @@
-/.gradle/
-/.idea/
-/build/
+/.gradle/*
+/.idea/*
+/build/*
 /run/saves/New World/playerdata/0ecc5f64-1f20-34a1-a889-f88d84dd36f3.dat
 /run/saves/New World/playerdata/0ecc5f64-1f20-34a1-a889-f88d84dd36f3.dat_old
 /run/saves/New World/advancements/0ecc5f64-1f20-34a1-a889-f88d84dd36f3.json
@@ -32,3 +32,4 @@
 /run/saves/New World/advancements/7c860150-b37d-33df-82cf-c73f863934ed.json
 /run/saves/New World/stats/7c860150-b37d-33df-82cf-c73f863934ed.json
 /run/logs/2024-03-30-4.log.gz
+/run/*
