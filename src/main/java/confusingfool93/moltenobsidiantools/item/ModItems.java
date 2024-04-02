@@ -90,10 +90,9 @@ public class ModItems
 
     private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries)
     {
-        entries.add(MOLTEN_OBSIDIAN);
-        entries.add(MOLTEN_UPGRADE_TEMPLATE);
-        entries.add(REINFORCED_MOLTEN_OBSIDIAN);
-        entries.add(REINFORCED_UPGRADE_TEMPLATE);
+        entries.addAfter(Items.DIAMOND, MOLTEN_OBSIDIAN);
+        entries.addAfter(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, MOLTEN_UPGRADE_TEMPLATE, REINFORCED_UPGRADE_TEMPLATE);
+        entries.addAfter(Items.NETHERITE_INGOT, REINFORCED_MOLTEN_OBSIDIAN);
     }
     private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries)
     {
