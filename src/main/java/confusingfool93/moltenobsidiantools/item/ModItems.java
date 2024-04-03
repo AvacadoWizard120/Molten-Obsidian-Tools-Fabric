@@ -99,14 +99,8 @@ public class ModItems
     }
     private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries)
     {
-        entries.add(MOLTEN_OBSIDIAN_PICKAXE);
-        entries.add(MOLTEN_OBSIDIAN_AXE);
-        entries.add(MOLTEN_OBSIDIAN_SHOVEL);
-        entries.add(MOLTEN_OBSIDIAN_HOE);
-        entries.add(REINFORCED_OBSIDIAN_PICKAXE);
-        entries.add(REINFORCED_OBSIDIAN_AXE);
-        entries.add(REINFORCED_OBSIDIAN_SHOVEL);
-        entries.add(REINFORCED_OBSIDIAN_HOE);
+        entries.addAfter(Items.DIAMOND_HOE, MOLTEN_OBSIDIAN_SHOVEL, MOLTEN_OBSIDIAN_PICKAXE, MOLTEN_OBSIDIAN_AXE, MOLTEN_OBSIDIAN_HOE);
+        entries.addAfter(Items.NETHERITE_HOE, REINFORCED_OBSIDIAN_SHOVEL, REINFORCED_OBSIDIAN_PICKAXE, REINFORCED_OBSIDIAN_AXE, REINFORCED_OBSIDIAN_HOE);
     }
 
     private static Item registerItem(String name, Item item)
