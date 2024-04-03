@@ -69,6 +69,9 @@ public class ModItems
     public static final Item REINFORCED_OBSIDIAN_AXE = registerItem("reinforced_obsidian_axe",
             new AxeItem(ModToolMaterial.REINFORCED, 10, -1f, new FabricItemSettings()));
 
+    public static final Item REINFORCED_OBSIDIAN_ARROW = registerItem("reinforced_obsidian_arrow",
+            new ArrowItem(new FabricItemSettings()));
+
     public static final Item MOLTEN_UPGRADE_TEMPLATE = registerItem("molten_upgrade_template",
             new SmithingTemplateItem(MOLTEN_UPGRADE_APPLIES_TO_TEXT, MOLTEN_UPGRADE_INGREDIENTS_TEXT, MOLTEN_UPGRADE_TEXT, MOLTEN_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, MOLTEN_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getMoltenUpgradeEmptyBaseSlotTextures(), getMoltenUpgradeEmptyAdditionsSlotTextures()));
 
