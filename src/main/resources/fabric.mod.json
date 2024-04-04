@@ -12,7 +12,7 @@
 		"homepage": "https://www.youtube.com/channel/UCei_eezV5x9f6tecwIOVO1g",
 		"sources": "https://github.com/AvacadoWizard120/Molten-Obsidian-Tools-Fabric/tree/1.20"
 	},
-	"license": "GPL-3.0",
+	"license": "MIT License",
 	"icon": "assets/moltenobsidiantools/icon.png",
 	"environment": "*",
 	"entrypoints": {

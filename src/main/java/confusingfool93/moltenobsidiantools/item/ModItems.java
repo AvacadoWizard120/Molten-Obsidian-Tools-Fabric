@@ -69,6 +69,9 @@ public class ModItems
     public static final Item REINFORCED_OBSIDIAN_AXE = registerItem("reinforced_obsidian_axe",
             new AxeItem(ModToolMaterial.REINFORCED, 10, -1f, new FabricItemSettings()));
 
+    public static final Item REINFORCED_OBSIDIAN_ARROW = registerItem("reinforced_obsidian_arrow",
+            new ArrowItem(new FabricItemSettings()));
+
     public static final Item MOLTEN_UPGRADE_TEMPLATE = registerItem("molten_upgrade_template",
             new SmithingTemplateItem(MOLTEN_UPGRADE_APPLIES_TO_TEXT, MOLTEN_UPGRADE_INGREDIENTS_TEXT, MOLTEN_UPGRADE_TEXT, MOLTEN_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, MOLTEN_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getMoltenUpgradeEmptyBaseSlotTextures(), getMoltenUpgradeEmptyAdditionsSlotTextures()));
 
@@ -90,21 +93,14 @@ public class ModItems
 
     private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries)
     {
-        entries.add(MOLTEN_OBSIDIAN);
-        entries.add(MOLTEN_UPGRADE_TEMPLATE);
-        entries.add(REINFORCED_MOLTEN_OBSIDIAN);
-        entries.add(REINFORCED_UPGRADE_TEMPLATE);
+        entries.addAfter(Items.DIAMOND, MOLTEN_OBSIDIAN);
+        entries.addAfter(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, MOLTEN_UPGRADE_TEMPLATE, REINFORCED_UPGRADE_TEMPLATE);
+        entries.addAfter(Items.NETHERITE_INGOT, REINFORCED_MOLTEN_OBSIDIAN);
     }
     private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries)
     {
-        entries.add(MOLTEN_OBSIDIAN_PICKAXE);
-        entries.add(MOLTEN_OBSIDIAN_AXE);
-        entries.add(MOLTEN_OBSIDIAN_SHOVEL);
-        entries.add(MOLTEN_OBSIDIAN_HOE);
-        entries.add(REINFORCED_OBSIDIAN_PICKAXE);
-        entries.add(REINFORCED_OBSIDIAN_AXE);
-        entries.add(REINFORCED_OBSIDIAN_SHOVEL);
-        entries.add(REINFORCED_OBSIDIAN_HOE);
+        entries.addAfter(Items.DIAMOND_HOE, MOLTEN_OBSIDIAN_SHOVEL, MOLTEN_OBSIDIAN_PICKAXE, MOLTEN_OBSIDIAN_AXE, MOLTEN_OBSIDIAN_HOE);
+        entries.addAfter(Items.NETHERITE_HOE, REINFORCED_OBSIDIAN_SHOVEL, REINFORCED_OBSIDIAN_PICKAXE, REINFORCED_OBSIDIAN_AXE, REINFORCED_OBSIDIAN_HOE);
     }
 
     private static Item registerItem(String name, Item item)
