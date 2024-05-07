@@ -1,28 +1,30 @@
 package confusingfool93.moltenobsidiantools.item;
 
-import net.fabricmc.yarn.constants.MiningLevels;
+import net.minecraft.block.Block;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial
 {
-    MOlTEN(MiningLevels.DIAMOND, 1900, 9.4f, 3.5f, 3,
+    MOlTEN(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1900, 9.4f, 3.5f, 3,
             () -> Ingredient.ofItems(ModItems.MOLTEN_OBSIDIAN)),
-    REINFORCED(MiningLevels.NETHERITE, 3000, 20f, 4.0f, 20,
-            () -> Ingredient.ofItems(ModItems.MOLTEN_OBSIDIAN))
+    REINFORCED(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 3000, 20f, 4.0f, 20,
+            () -> Ingredient.ofItems(ModItems.REINFORCED_MOLTEN_OBSIDIAN))
     ;
 
-    private final int miningLevel;
+    private final TagKey<Block> inverseTag;
     private final int itemDurability;
     private final float miningSpeed;
     private final float attackDamage;
     private final int enchantability;
     private final Supplier<Ingredient> repairIngredient;
 
-    ModToolMaterial(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
-        this.miningLevel = miningLevel;
+    ModToolMaterial(final TagKey<Block> inverseTag, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
+        this.inverseTag = inverseTag;
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;
         this.attackDamage = attackDamage;
@@ -46,8 +48,8 @@ public enum ModToolMaterial implements ToolMaterial
     }
 
     @Override
-    public int getMiningLevel() {
-        return this.miningLevel;
+    public TagKey<Block> getInverseTag() {
+        return this.inverseTag;
     }
 
     @Override

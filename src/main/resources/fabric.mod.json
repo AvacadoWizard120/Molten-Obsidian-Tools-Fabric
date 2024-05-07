@@ -30,9 +30,9 @@
 		"moltenobsidiantools.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.15.7",
-		"minecraft": ">=1.20.2",
-		"java": ">=17",
+		"fabricloader": ">=0.15.11",
+		"minecraft": ">=1.20.5",
+		"java": ">=21",
 		"fabric-api": "*"
 	},
 	"suggests": {

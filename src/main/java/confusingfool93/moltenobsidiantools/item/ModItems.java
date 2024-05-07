@@ -1,7 +1,6 @@
 package confusingfool93.moltenobsidiantools.item;
 
 import confusingfool93.moltenobsidiantools.MoltenObsidianTools;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
@@ -40,44 +39,40 @@ public class ModItems
     private static final Identifier EMPTY_SLOT_MOLTEN_TEXTURE = new Identifier(MoltenObsidianTools.MOD_ID, "item/empty_slot_molten");
     private static final Identifier EMPTY_SLOT_REINFORCED_TEXTURE = new Identifier(MoltenObsidianTools.MOD_ID, "item/empty_slot_reinforced");
     public static final Item MOLTEN_OBSIDIAN = registerItem("molten_obsidian",
-            new Item(new FabricItemSettings().maxCount(4)));
+            new Item(new Item.Settings().maxCount(4)));
 
     public static final Item REINFORCED_MOLTEN_OBSIDIAN = registerItem("reinforced_molten_obsidian",
-            new Item(new FabricItemSettings().maxCount(1)));
+            new Item(new Item.Settings().maxCount(1).fireproof()));
 
     public static final Item MOLTEN_OBSIDIAN_PICKAXE = registerItem("molten_obsidian_pickaxe",
-            new PickaxeItem(ModToolMaterial.MOlTEN, 4, -1f, new FabricItemSettings()));
+            new PickaxeItem(ModToolMaterial.MOlTEN, (new Item.Settings()).fireproof().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.MOlTEN, 4, -1f))));
 
     public static final Item MOLTEN_OBSIDIAN_AXE = registerItem("molten_obsidian_axe",
-            new AxeItem(ModToolMaterial.MOlTEN, 10, -1f, new FabricItemSettings()));
+            new AxeItem(ModToolMaterial.MOlTEN, (new Item.Settings()).fireproof().attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterial.MOlTEN, 10, -1f))));
 
     public static final Item MOLTEN_OBSIDIAN_SHOVEL = registerItem("molten_obsidian_shovel",
-            new ShovelItem(ModToolMaterial.MOlTEN, 3, -1f, new FabricItemSettings()));
+            new ShovelItem(ModToolMaterial.MOlTEN, (new Item.Settings()).fireproof().attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterial.MOlTEN, 3, -1f))));
 
     public static final Item MOLTEN_OBSIDIAN_HOE = registerItem("molten_obsidian_hoe",
-            new HoeItem(ModToolMaterial.MOlTEN, 2, -1f, new FabricItemSettings()));
+            new HoeItem(ModToolMaterial.MOlTEN, (new Item.Settings()).fireproof().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterial.MOlTEN, 2, -1f))));
 
     public static final Item REINFORCED_OBSIDIAN_PICKAXE = registerItem("reinforced_obsidian_pickaxe",
-            new PickaxeItem(ModToolMaterial.REINFORCED, 4, -1f, new FabricItemSettings()));
+            new PickaxeItem(ModToolMaterial.REINFORCED, (new Item.Settings()).fireproof().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.REINFORCED, 4, -1f))));
 
     public static final Item REINFORCED_OBSIDIAN_HOE = registerItem("reinforced_obsidian_hoe",
-            new HoeItem(ModToolMaterial.REINFORCED, 2, -1f, new FabricItemSettings()));
+            new HoeItem(ModToolMaterial.REINFORCED, (new Item.Settings()).fireproof().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterial.REINFORCED, 2, -1f))));
 
     public static final Item REINFORCED_OBSIDIAN_SHOVEL = registerItem("reinforced_obsidian_shovel",
-            new ShovelItem(ModToolMaterial.REINFORCED, 3, -1f, new FabricItemSettings()));
+            new ShovelItem(ModToolMaterial.REINFORCED, (new Item.Settings()).fireproof().attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterial.REINFORCED, 3, -1f))));
 
     public static final Item REINFORCED_OBSIDIAN_AXE = registerItem("reinforced_obsidian_axe",
-            new AxeItem(ModToolMaterial.REINFORCED, 10, -1f, new FabricItemSettings()));
-
-    public static final Item REINFORCED_OBSIDIAN_ARROW = registerItem("reinforced_obsidian_arrow",
-            new ArrowItem(new FabricItemSettings()));
+            new AxeItem(ModToolMaterial.REINFORCED, (new Item.Settings()).fireproof().attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterial.REINFORCED, 10, -1f))));
 
     public static final Item MOLTEN_UPGRADE_TEMPLATE = registerItem("molten_upgrade_template",
             new SmithingTemplateItem(MOLTEN_UPGRADE_APPLIES_TO_TEXT, MOLTEN_UPGRADE_INGREDIENTS_TEXT, MOLTEN_UPGRADE_TEXT, MOLTEN_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, MOLTEN_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getMoltenUpgradeEmptyBaseSlotTextures(), getMoltenUpgradeEmptyAdditionsSlotTextures()));
 
     public static final Item REINFORCED_UPGRADE_TEMPLATE = registerItem("reinforced_upgrade_template",
             new SmithingTemplateItem(REINFORCED_UPGRADE_APPLIES_TO_TEXT, REINFORCED_UPGRADE_INGREDIENTS_TEXT, REINFORCED_UPGRADE_TEXT, REINFORCED_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, REINFORCED_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getMoltenUpgradeEmptyBaseSlotTextures(), getReinforcedUpgradeEmptyAdditionsSlotTextures()));
-
 
     private static List<Identifier> getMoltenUpgradeEmptyBaseSlotTextures() {
         return List.of(EMPTY_SLOT_PICKAXE_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_SLOT_HOE_TEXTURE, EMPTY_SLOT_SHOVEL_TEXTURE);
